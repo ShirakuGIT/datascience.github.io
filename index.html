@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>[PO] Data Science</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8fd0591c-6c25-4494-b296-09f532430b2d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb2.jpg" style="object-position:center 70%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧑‍💻</span></div><h1 class="page-title">[PO] Data Science</h1><p class="page-description"></p></header><div class="page-body"><p id="bc6ebbc9-77a0-44bd-acf5-e8dd7120fc65" class=""><div class="indented"><h1 id="251b1bbd-a63d-4a47-bd6c-408e2fcc01d4" class="">Overarching Curriculum</h1></div></p><pre id="ba398989-e92a-4de6-a1fb-19e615d91c59" class="code"><code>graph TD
+	  A(Data Science) --&gt; B[Math &amp; Statistics]
+		A --&gt;  C[Programming - Python or R]
+		C --&gt; I[Data Visualization]
+		B &amp; C --&gt; D[Machine Learning Algorithms]
+		A --&gt; E[Data Analytics &amp; Big Data]
+		E --&gt; Hadoop
+		E --&gt; Spark
+		A --&gt; F[SQL]
+		F --&gt; G[NoSQL] &amp; H[Relational Databases]</code></pre><h2 id="53116053-e745-4ea8-931b-7fafe636a39b" class="">Links!</h2><figure id="5911b8c7-5318-433f-9715-5e02c0554cbf" class="block-color-blue link-to-page"><a href="https://www.notion.so/Data-Science-Resource-Guide-Read-The-Docs-5911b8c75318433f97155e02c0554cbf?pvs=21"><span class="icon">📚</span>Data Science Resource Guide - Read The Docs!</a></figure><figure id="c7f57f9c-9d0f-4b54-b1e2-c5d2ffae47c9" class="block-color-teal link-to-page"><a href="https://www.notion.so/Data-Science-Courses-Tutorials-c7f57f9c9d0f4b54b1e2c5d2ffae47c9?pvs=21"><span class="icon">🎓</span>Data Science - Courses &amp; Tutorials</a></figure><figure id="9b9e7fd4-0250-45c5-a92a-19a5dde81074" class="block-color-yellow link-to-page"><a href="https://www.notion.so/Mathematics-for-Data-Science-Learning-Path-Optional-9b9e7fd4025045c5a92a19a5dde81074?pvs=21"><span class="icon">📏</span>Mathematics for Data Science Learning Path [Optional]</a></figure><hr id="2f2d4c0f-7e08-4471-ae5d-faffb4f1084b"/><h1 id="94b3a22d-4790-457c-b2d8-55ff4b424e75" class="">📚 <strong>Your Data Science Learning Journey → A rough idea </strong>💡</h1><div id="be5e564f-6d63-40b8-891f-95f2e45799ec" class="column-list"><div id="a2e4c9a3-b92c-4176-b79c-2654dfc8bfb8" style="width:33.33333333333333%" class="column"><h3 id="87065e8e-273d-4071-8bd9-38de273eb407" class="">🚀 <strong>1. Introduction to Data Science</strong></h3><ul id="14edaee5-329b-49fe-8f8d-976ed3442108" class="toggle"><li><details open=""><summary>Before diving into specifics, get a bird&#x27;s-eye view of the field.</summary><ul id="98452501-eaab-4b95-a8f0-6c89bc591899" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://towardsdatascience.com/what-is-data-science-8b7e05c8a464">What is Data Science?</a></li></ul><ul id="e6d14599-8506-4bba-9805-b3c3b9227085" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/watch?v=8LucP1wiX1g">Data Science: Reality vs Expectations</a></li></ul></details></li></ul><h3 id="92073a75-85e1-4028-a15a-569e344b5b79" class="">🖥️ <strong>2. Programming Fundamentals</strong></h3><p id="28b5fa64-5d0b-4aa7-8081-5a0aec84a031" class="">Start with a solid foundation in programming.</p><ul id="f66d0b36-de0f-4990-9113-caa2cfe0c097" class="toggle"><li><details open=""><summary><strong>Python</strong></summary><ul id="6b65079a-4d27-482a-a99e-3998ee7c4931" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a></li></ul><ul id="442b1826-864f-4f92-b0b1-bad05d2823c2" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU">Corey Schafer&#x27;s Python Tutorials</a></li></ul></details></li></ul><h3 id="d17d3e28-dc88-4ffb-a13d-4fbdede26c19" class="">📊 <strong>3. Data Manipulation and Analysis</strong></h3><p id="dff0114d-e953-414b-9dd5-16c48ac17cde" class="">Dive into data wrangling and exploratory data analysis.</p><ul id="d7196a1d-af21-4d3c-80ab-5e539470982b" class="toggle"><li><details open=""><summary><strong>pandas</strong></summary><ul id="b481cfd2-1045-4d8b-81f9-c293324ba3cc" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662">Python for Data Analysis</a></li></ul><ul id="409940b3-1773-44cf-ab86-a3dff6d3c63d" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y">Data School - pandas Tutorials</a></li></ul></details></li></ul><h3 id="f830c643-469f-4133-9a37-2b959472bd77" class="">🎨 <strong>4. Data Visualization</strong></h3><p id="093b7082-be25-490f-9fb4-7edcd6c139ef" class="">Learn to present data in a meaningful and intuitive manner.</p><ul id="69d74cf7-9fec-4f1b-af4c-cc7338ec17d1" class="toggle"><li><details open=""><summary><strong>Matplotlib &amp; Seaborn</strong></summary><ul id="46aef3c6-dff9-4712-9c62-d96596fe1570" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_">Corey Schafer&#x27;s Matplotlib Tutorials</a></li></ul></details></li></ul></div><div id="07b72976-995a-4256-9c20-5f50acd76296" style="width:33.33333333333333%" class="column"><h3 id="7bb8ddb4-6f26-44f9-a6cc-6f4ff7c3f5e0" class="">🖱️ <strong>5. Statistics &amp; Probability</strong></h3><ul id="8ddd32a5-506c-4940-984d-807ddc147bb8" class="toggle"><li><details open=""><summary>Grasp the foundational concepts behind data interpretation.</summary><ul id="7413234d-4b0d-4496-8b06-c12f359c9d37" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.statisticsdonewrong.com/">Statistics Done Wrong</a></li></ul><ul id="c739efaa-1dfd-4e10-b54d-f8b459346e54" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/user/joshstarmer">StatQuest with Josh Starmer</a></li></ul></details></li></ul><h3 id="81f9bb2f-a369-4a33-a99f-2195dbe41257" class="">🤖 <strong>6. Machine Learning</strong></h3><p id="f4ad3eac-4674-4227-830f-9a98cba07595" class="">Move onto predictive analytics and automation.</p><ul id="07e04302-a7b3-4fec-858e-9a7d990a2256" class="toggle"><li><details open=""><summary><strong>Scikit-learn</strong></summary><ul id="0a3c1b3d-4835-43c7-9193-ad11d311167d" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Introduction-Machine-Learning-Python-Scientists/dp/1449369413">Introduction to Machine Learning with Python</a></li></ul><ul id="07d6303d-8a4d-43b5-875b-d80f9568a7fb" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v">Sentdex - Machine Learning with Python</a></li></ul></details></li></ul><h3 id="2720f4c0-276e-4d93-ad76-1854c4a58cb6" class="">📜 <strong>7. Deep Learning</strong></h3><p id="e9afd45f-445d-424f-9d38-aabb9356aa66" class="">Venture into neural networks and advanced predictive models.</p><ul id="7d2a1f22-9f04-40a9-8173-6d4f15d495d9" class="toggle"><li><details open=""><summary><strong>TensorFlow &amp; Keras</strong></summary><ul id="b03f1f01-f1f1-472c-a636-371f0654fa81" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.manning.com/books/deep-learning-with-python">Deep Learning with Python by François Chollet</a></li></ul><ul id="82fdfe6e-c64f-4d83-bec9-2bb8b28a0a8e" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://youtube.com/playlist?list=PLhhyoLH6IjfxVOdVC1P1L5z5azs0XjMsb&amp;si=yHBjr_oibfVTnb_-">TensorFlow Official Tutorials</a></li></ul></details></li></ul><h3 id="39f19f4f-d462-4fd1-a1d7-16448126c1d1" class="">💾 <strong>8. Big Data Technologies</strong></h3><p id="e92af0be-2338-45cb-955a-08d508f70e98" class="">Understand data at scale.</p><ul id="90c8faea-a447-43f0-a409-67e71c9cdced" class="toggle"><li><details open=""><summary><strong>Hadoop &amp; Spark</strong></summary><ul id="d862afe5-1576-410c-8e42-dc98de9a1436" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/watch?v=lDWO7CXYU8k">Databricks - Apache Spark Full Course</a></li></ul><p id="ddbadd1d-b754-4127-b028-a7cf04173175" class="">
+</p></details></li></ul></div><div id="5aff6a29-0ad0-4e9c-91a2-0b80ec0e085e" style="width:33.33333333333333%" class="column"><h3 id="070cdcfe-1582-4b19-97ba-8bd5a7bc954c" class="">☁️ <strong>9. Cloud and Deployment</strong></h3><p id="a39055b0-c035-49fd-af24-c678315fa956" class="">Learn how to deploy models and use cloud resources.</p><ul id="ac6c8887-ddd2-4691-a382-8f4de3129bee" class="toggle"><li><details open=""><summary><strong>AWS, GCP, Azure</strong></summary><ul id="91092b57-1b83-4a61-bc18-38cc43c5e0d5" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/watch?v=S-3zN8Q0Sts">AWS - Introduction to Amazon EC2</a></li></ul></details></li></ul><h3 id="d0a5be67-6960-4209-9d40-f6e68f443b1b" class="">🔄 <strong>10. Version Control</strong></h3><p id="b56d26e3-dd1a-4326-b8b1-6f320ce2a4bd" class="">Stay organized and collaborative.</p><ul id="911fce54-03f8-490c-a278-21666ecc95b3" class="toggle"><li><details open=""><summary><strong>Git &amp; GitHub</strong></summary><ul id="d17a3f84-8531-4964-9c67-19356d93a3e7" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/githubguides">GitHub Training &amp; Guides</a></li></ul></details></li></ul><h3 id="ee8b5307-69a7-4cee-8dc7-8a3a51caf9cc" class="">🌐 <strong>11. Real-world Projects</strong></h3><ul id="c5f49523-2235-456b-83ea-804a192fd7fc" class="toggle"><li><details open=""><summary>Get hands-on and solidify your knowledge.</summary><ul id="a236c2c7-076d-417a-be7e-cf99728659d8" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Data-Science-Projects-Python-Predictive/dp/1838551026">Data Science Projects with Python</a></li></ul><ul id="7447837f-91db-4da3-b517-7226ccb45474" class="bulleted-list"><li style="list-style-type:disc">🌐 Browse: <a href="https://www.kaggle.com/competitions">Kaggle Competitions</a></li></ul></details></li></ul><h3 id="c28fe2c0-a5bd-4633-b8e2-a9e2bde3c5cb" class="">📜 <strong>12. Continued Learning &amp; Specialization</strong></h3><ul id="22fc3d44-552e-43b8-9855-c097642c018f" class="toggle"><li><details open=""><summary>The field is vast; consider diving deeper into areas of interest.</summary><ul id="ff740fbc-d5cc-405d-87fc-d61c0c48b948" class="bulleted-list"><li style="list-style-type:disc">📚 Courses: <a href="https://www.coursera.org/courses?query=data%20science">Coursera Specializations</a></li></ul><ul id="515f31e3-2dc6-44ce-a73a-77833dac36ce" class="bulleted-list"><li style="list-style-type:disc">📖 Books: <a href="https://www.oreilly.com/topics/data">O&#x27;Reilly Data Science Topic</a></li></ul><p id="064453f3-e484-4fac-ac23-491a337f60e4" class="">
+</p></details></li></ul></div></div><hr id="a6af3bbc-7aa3-4cfc-8dc0-a79c0dd2809f"/><h1 id="6adc4e57-6f7b-4e81-acbb-214df2956277" class="">📅 <strong>3-Month Data Science Learning Calendar</strong></h1><div id="3c4de8ec-84ba-4bdb-a731-98e51ae62fe2" class="column-list"><div id="c4b2d4c7-5859-4429-a123-8350e38ea764" style="width:33.33333333333333%" class="column"><h3 id="2b170fc3-76cd-426d-81ab-2d715e45bd06" class="">📆 <strong>Month 1: Foundations &amp; Data Manipulation</strong></h3><h3 id="e23f2f6e-37bc-4343-a7c1-8eebe1b8249a" class=""><strong>Week 1: Introduction to Data Science &amp; Python Basics</strong></h3><ul id="418cf852-8de2-4f77-a2eb-18f275330e63" class="toggle"><li><details open=""><summary>Introduction to Data Science</summary><ul id="a98cffba-cc45-4111-ba55-7706c27f1983" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://towardsdatascience.com/what-is-data-science-8b7e05c8a464">What is Data Science?</a></li></ul></details></li></ul><ul id="71e0c165-4b40-4c52-a49e-e7c7e122afc9" class="toggle"><li><details open=""><summary>Python Basics:</summary><ul id="966bbac7-e0d9-47e6-9c14-72e61ca01799" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU">Corey Schafer&#x27;s Python Basics Playlist</a></li></ul></details></li></ul><h3 id="76b068f9-66d0-4d70-88df-42d87374c87a" class=""><strong>Week 2: Intermediate Python &amp; Data Structures</strong></h3><ul id="07b79fa3-a891-4e9c-8634-d02cea6faefe" class="toggle"><li><details open=""><summary>Dive into Python:</summary><ul id="b7d7f3bb-4f11-4017-aaca-2ab11d23d86f" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PLzMcBGfZo4-mFu00qxl0a67RhjjZj3jXm">Tech With Tim Python Intermediate Tutorials</a></li></ul></details></li></ul><h3 id="a0fcd578-cd97-456c-826a-5dedb4c223f2" class=""><strong>Week 3 &amp; 4: Data Manipulation with Pandas</strong></h3><ul id="f51114c5-5230-49ae-9a9c-b23af93927dd" class="toggle"><li><details open=""><summary>Dive into Pandas:</summary><ul id="536fd963-c627-4305-a4f1-2783b4df85d5" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662">Python for Data Analysis</a></li></ul><ul id="62ee0900-d428-4087-96a0-983912f21ed8" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL5-da3qGB5ICCsgW1MxlZ0Hq8LL5U3u9y">Data School - pandas Tutorials</a></li></ul></details></li></ul></div><div id="729c8c95-c53c-4545-be23-b23f92bbaf6b" style="width:33.33333333333333%" class="column"><h3 id="5d4e01b7-c41a-4989-9572-1b8042c62e64" class="">📆 <strong>Month 2: Visualization, Statistics &amp; Basic Machine Learning</strong></h3><h3 id="cbcc1bce-85f6-459a-a3d4-06e1fa295299" class=""><strong>Week 5 &amp; 6: Data Visualization</strong></h3><ul id="e40cd673-51a6-4b43-a33e-3a494e3a9192" class="toggle"><li><details open=""><summary>Visualization with Matplotlib &amp; Seaborn:</summary><ul id="38718eff-5f6d-4fb2-90e3-5f22b1dc8406" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a></li></ul><ul id="510cf9bf-5d02-4efc-a73d-b6dbc8549a0d" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_">Corey Schafer&#x27;s Matplotlib Tutorials</a></li></ul></details></li></ul><h3 id="232b3d20-b5ea-4171-8945-9d4fadcc26d8" class=""><strong>Week 7 &amp; 8: Statistics &amp; Probability</strong></h3><ul id="b688f6a5-69bf-4121-9a3a-774eb4a1a0ed" class="toggle"><li><details open=""><summary>Foundational Statistics:</summary><ul id="16e6d8ba-4776-493f-bf6a-ed564a6cf0c6" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.statisticsdonewrong.com/">Statistics Done Wrong</a></li></ul><ul id="8976c279-9e7b-4a05-a83e-24f4a0b60ae5" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/user/joshstarmer">StatQuest with Josh Starmer</a></li></ul><p id="ba8624f2-c092-4a9d-ba77-1335aa66750e" class="">
+</p></details></li></ul></div><div id="fea38a7a-6bf1-45b7-81a6-b50254da2e43" style="width:33.33333333333333%" class="column"><h3 id="dcca6733-d507-49a3-9331-8282b19a9e4a" class="">📆 <strong>Month 3: Advanced Machine Learning &amp; Projects</strong></h3><h3 id="6e0e6c65-98f2-4a92-be37-5ce0573686f2" class=""><strong>Week 9 &amp; 10: Supervised Learning &amp; Unsupervised Learning</strong></h3><ul id="304a413c-8c00-43c4-8240-b6d3656dfbed" class="toggle"><li><details open=""><summary>Dive into ML:</summary><ul id="aba1bd1a-f8ca-4a54-8a76-c752fd9dec0a" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Introduction-Machine-Learning-Python-Scientists/dp/1449369413">Introduction to Machine Learning with Python</a></li></ul><ul id="8dd04ef7-a29d-490a-8e0c-7a8ab629f801" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v">Sentdex - Machine Learning with Python</a></li></ul></details></li></ul><h3 id="b4e7bc51-8ea9-4b9b-a63b-6450fa8d59f7" class=""><strong>Week 11: Deep Learning Basics</strong></h3><ul id="1c5b1317-975a-4f71-9995-539a62e70882" class="toggle"><li><details open=""><summary>Neural Networks Introduction:</summary><ul id="d0dc1ef5-323d-4d30-8738-6bc713f54aac" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.manning.com/books/deep-learning-with-python">Deep Learning with Python by François Chollet</a></li></ul><ul id="6ccea068-684c-4efc-b0ef-926a661b4df1" class="bulleted-list"><li style="list-style-type:disc">🎥 Watch: <a href="https://www.youtube.com/user/TensorFlow">TensorFlow Official Tutorials</a></li></ul></details></li></ul><h3 id="437e7009-92a6-47ff-a75d-cf3074c51766" class=""><strong>Week 12: Capstone Project</strong></h3><ul id="d053eb86-2811-4c1f-a804-7444529399e3" class="toggle"><li><details open=""><summary>Hands-on project:</summary><ul id="cf47abcf-7649-4954-a921-f65452e59a3c" class="bulleted-list"><li style="list-style-type:disc">🌐 Explore: <a href="https://www.kaggle.com/competitions">Kaggle Competitions</a></li></ul><ul id="6e36eee6-9e71-4519-b438-011044583cad" class="bulleted-list"><li style="list-style-type:disc">📖 Read: <a href="https://www.amazon.com/Data-Science-Projects-Python-Predictive/dp/1838551026">Data Science Projects with Python</a></li></ul></details></li></ul></div></div><hr id="bc0bf65a-9f29-478f-8de8-adad7edee6bc"/><h1 id="9c5a7bb1-cbeb-44ed-b0bf-c1f53503b209" class="">📅 <strong>2-Month Mathematics for Data Science Learning Calendar</strong></h1><div id="aace8048-b29e-4441-90b6-40478b12581a" class="column-list"><div id="670e80b2-daf4-4bc8-8a2c-4c8e689fa041" style="width:50%" class="column"><h3 id="becf4923-08af-4aca-8271-b1eee17dd070" class="">📆 <strong>Month 1: Linear Algebra &amp; Calculus</strong></h3><h3 id="37634924-e0b6-487b-8ee5-df302140ca38" class=""><strong>Week 1 &amp; 2: Linear Algebra</strong></h3><ul id="e3d1c070-1c85-4849-a02f-5695832a3d02" class="toggle"><li><details open=""><summary><strong>Foundational Concepts</strong>: Vectors, matrices, determinants, eigenvalues, and eigenvectors.</summary><ul id="ed7a7c0a-4ef3-4a8b-a34f-ce3bb59d9259" class="bulleted-list"><li style="list-style-type:disc">📖 Course: <a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/">MIT - Linear Algebra</a></li></ul><ul id="4dae77ca-2048-4894-b015-f80ac0f87b0f" class="bulleted-list"><li style="list-style-type:disc">📚 Book: <a href="https://www.amazon.com/Linear-Algebra-Right-Undergraduate-Mathematics/dp/3319110799">Linear Algebra Done Right</a> by Sheldon Axler</li></ul><ul id="6fa8ad17-00c3-4175-ba8f-dd647b22a59d" class="bulleted-list"><li style="list-style-type:disc">🎥 YouTube: <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3Blue1Brown - Essence of Linear Algebra</a> (For intuitive understanding)</li></ul></details></li></ul><h3 id="7d86f14e-b14a-42e9-96b6-78d47b6fe725" class=""><strong>Week 3 &amp; 4: Calculus</strong></h3><ul id="08f60378-221a-4dc1-91eb-202bb606e2a7" class="toggle"><li><details open=""><summary><strong>Foundational Concepts</strong>: Limits, derivatives, integrals, and multivariable calculus.</summary><ul id="c8d059fc-f94c-4010-aa31-122aaa68fc17" class="bulleted-list"><li style="list-style-type:disc">📖 Course: <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/">MIT - Single Variable Calculus</a></li></ul><ul id="9aa88f07-f661-47b7-82af-d458a5201ec6" class="bulleted-list"><li style="list-style-type:disc">🎥 YouTube: <a href="https://www.youtube.com/user/professorleonard57/playlists">Professor Leonard&#x27;s Calculus Playlists</a> (Focus on intuitive understanding)</li></ul></details></li></ul></div><div id="395efb5a-756e-4fec-bd50-5fc6c0f81372" style="width:50%" class="column"><h3 id="3e6758b1-5057-4727-ab99-147a26ce445e" class="">📆 <strong>Month 2: Probability, Statistics &amp; Optimization</strong></h3><h3 id="11bb1d2f-566b-4df2-9e7c-112c376a2ff7" class=""><strong>Week 5 &amp; 6: Probability and Statistics</strong></h3><ul id="601d4624-b11d-4216-8f08-61f01a40ebd9" class="toggle"><li><details open=""><summary><strong>Foundational Concepts</strong>: Random variables, distributions, expectations, variance, hypothesis testing.</summary><ul id="7d3a393d-c737-4bdf-8838-6c057105aa3b" class="bulleted-list"><li style="list-style-type:disc">📖 Course: <a href="https://projects.iq.harvard.edu/stat110/home">Harvard - Statistics 110: Probability</a></li></ul><ul id="6f1ec736-6a21-4753-986d-589f1aece4ac" class="bulleted-list"><li style="list-style-type:disc">📚 Book: <a href="https://www.amazon.com/Introduction-Probability-Chapman-Statistical-Science/dp/1466575573">Introduction to Probability</a> by Joseph K. Blitzstein and Jessica Hwang</li></ul><ul id="079d18be-0cb6-4c60-94ce-d1c19acd5425" class="bulleted-list"><li style="list-style-type:disc">🎥 YouTube: <a href="https://www.youtube.com/user/joshstarmer">StatQuest with Josh Starmer</a> (Great for intuitive understanding)</li></ul></details></li></ul><h3 id="f434c9f4-4ab7-459b-8570-5dc159eb6dbd" class=""><strong>Week 7 &amp; 8: Optimization</strong></h3><ul id="610f9c4a-d39f-4f2b-ba31-e69d4943f42e" class="toggle"><li><details open=""><summary><strong>Foundational Concepts</strong>: Convex sets, convex functions, optimization problems, Lagrange multipliers.</summary><ul id="f69c1cfd-45a3-4e68-82af-bc122f44df2e" class="bulleted-list"><li style="list-style-type:disc">📖 Course: <a href="https://see.stanford.edu/Course/EE364A">Stanford - Convex Optimization</a></li></ul><ul id="18b1a762-5b3e-45ca-a7c5-5230e8beb1ee" class="bulleted-list"><li style="list-style-type:disc">🎥 YouTube: <a href="https://www.youtube.com/playlist?list=PL3940DD956CDF0622">Stephen Boyd - Convex Optimization I</a> (Focus on intuitive understanding)</li></ul></details></li></ul></div></div><hr id="a52311fb-a7cb-4b07-a621-c352fc3d05ac"/><h1 id="d8426732-f8a3-48a6-8047-1ea6b040736b" class="">🛠️ <strong>Comprehensive Data Science Projects and Resources</strong></h1><div id="3b38715a-d057-464a-b283-92406d509d1c" class="column-list"><div id="b25da2d2-808d-4115-bcb3-486cf6f64f10" style="width:100%" class="column"><h3 id="dc753537-7685-412f-8ec3-817a512bdc86" class="">1. <strong>Exploratory Data Analysis (EDA) on a Public Dataset</strong></h3><ul id="fb503fbc-871a-4045-8287-b4ff4083602b" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Conduct a detailed EDA on the Titanic dataset.</li></ul><ul id="a302cbd7-d783-4639-bac1-14a9cab9a8a8" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="f83e773a-3f78-45c3-ac10-c69de0c48395" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/c/titanic/data">Kaggle Titanic Dataset</a></li></ul><ul id="23a0e657-4ba9-4bd6-9f87-082b80f52009" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.kaggle.com/startupsci/titanic-data-science-solutions">Titanic Data Science Solutions</a></li></ul></li></ul><h3 id="f7091a7d-0a24-42f5-884a-e7a2266dea9f" class="">2. <strong>Time Series Forecasting</strong></h3><ul id="5b047f31-0c9b-41fd-a887-b05f127d682f" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Predict future stock prices or weather trends.</li></ul><ul id="96f431af-94be-4094-bbd1-c9ce5bec9b99" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="d2e17464-5911-4abd-9aee-5aeaff4e0376" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://finance.yahoo.com/">Yahoo Finance</a> (for stock prices)</li></ul><ul id="0da04ec2-421e-4322-a9aa-4e74af85d9a5" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.amazon.com/Python-Finance-Mastering-Data-Driven-Finance/dp/1492024333">Python for Finance</a></li></ul></li></ul><h3 id="0ec2f4f4-0efb-47cc-b9b0-d52d4c169ed6" class="">3. <strong>Natural Language Processing (NLP)</strong></h3><ul id="4d9568ce-6fde-4e98-ba5b-85190d67f566" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Sentiment analysis on movie reviews.</li></ul><ul id="1c571f52-6bf1-4c23-8266-5338c9dec5b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="0c328136-f493-4b2a-9c81-87b74b245049" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews">IMDb Dataset</a></li></ul></li></ul><ul id="4d4bf381-aa39-4a75-976d-8510ede1acb6" class="bulleted-list"><li style="list-style-type:disc">Guide: <a href="https://www.datacamp.com/courses/natural-language-processing-fundamentals-in-python">Natural Language Processing in Python</a></li></ul><h3 id="4e50340e-c1d9-448e-9154-6e5532cd12b6" class="">4. <strong>Image Classification with Deep Learning</strong></h3><ul id="7dc0caf6-6f41-4ea7-a17a-9015ac23cb77" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Classify images from the CIFAR-10 dataset.</li></ul><ul id="567a667c-bbaf-40d2-b8e3-9adb3bf1c5d6" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="19efecc6-52b9-4c6b-8d0e-89bf5b83429f" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a></li></ul><ul id="0012cdb1-2fd8-4638-8329-22dbe9a10058" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.tensorflow.org/tutorials/images/classification">TensorFlow Image Classification</a></li></ul></li></ul><h3 id="4e8ba4b4-8dc2-44f8-b91f-9e8384987e30" class="">5. <strong>Recommender System</strong></h3><ul id="d8dc80f8-8edf-4e6e-ae58-8789622ccd38" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Build a movie recommendation system.</li></ul><ul id="b02c0787-d4fc-4d31-8b93-c0d04f8c05b2" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="96f314f2-3d95-45b4-9a9c-f3f02e9923c9" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://grouplens.org/datasets/movielens/">MovieLens Dataset</a></li></ul><ul id="302cdd5b-ada4-437d-8e47-d19467741b31" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.udemy.com/course/building-recommender-systems-machine-learning-ai/">Building Recommender Systems with Machine Learning and AI</a></li></ul></li></ul></div><div id="a5457fb2-239b-4e64-b736-3d32488deef8" style="width:100%" class="column"><h3 id="9c5b4fd8-a601-42fb-be68-4a8afa55589f" class="">6. <strong>Clustering for Customer Segmentation</strong></h3><ul id="b72d8603-ae4a-4fe4-9b33-bc05b899fad0" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Segment customers based on purchasing behavior.</li></ul><ul id="e589562a-ea2b-47ac-a3ea-0f8fe85edef2" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="f8640be8-af77-4bb2-a837-9f133957fce5" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python">Mall Customer Segmentation Data</a></li></ul><ul id="0b238fef-e25f-4090-a877-096c006be70b" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.datacamp.com/courses/customer-segmentation-in-python">Customer Segmentation in Python</a></li></ul></li></ul><h3 id="564acf34-eb2d-4201-880b-aee9f6d6261e" class="">7. <strong>Anomaly Detection in Network Traffic</strong></h3><ul id="3b9b8a51-fa7a-44c4-8cd0-d2e7acd1d0bf" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Detect fraudulent activities or network intrusions.</li></ul><ul id="5c765937-f6c0-47ac-bb2b-59a27507bccc" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="344d9a36-105e-4d3b-a0d3-68a9877394e8" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html">KDD Cup 1999 Data</a></li></ul><ul id="a5da6641-db89-427a-9217-a8e04421b5dc" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.analyticsvidhya.com/blog/2019/02/outlier-detection-python-pyod/">Anomaly Detection Techniques in Python</a></li></ul></li></ul><h3 id="7aa64f24-3bcf-4165-9b52-85fe209a84b5" class="">8. <strong>Association Rule Learning for Market Basket Analysis</strong></h3><ul id="63df5ba6-a803-4f91-87e5-e82f54243552" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Understand purchasing behaviors by identifying associations between products.</li></ul><ul id="bbbb091f-752d-466e-8f74-a0a316fc3ec0" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="a15ed6c8-4793-4029-b664-7223e2d212a0" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/heeraldedhia/groceries-dataset">Groceries Dataset</a></li></ul><ul id="dec59b1d-ca02-48c0-a845-01c626b5d0e1" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/">Market Basket Analysis with Python and MLxtend</a></li></ul></li></ul><h3 id="7e518465-5206-4d60-9958-fa758f99f335" class="">9. <strong>Regression Analysis for House Price Prediction</strong></h3><ul id="57b5aa29-eacf-4682-b7ed-9a5252d32e99" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Predict house prices based on features like location, number of rooms, etc.</li></ul><ul id="f81483ff-d3de-47ac-a7e3-115dfbc8f37b" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="a803f0b7-02b5-4e62-9863-05ad62b3249b" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">House Prices Dataset</a></li></ul><ul id="d49b2509-a26b-4d06-92b1-153a36b72cb7" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python">Comprehensive Data Exploration with Python</a></li></ul></li></ul><h3 id="bc970bd3-4bb6-4f71-ae3f-a5f01883d718" class="">10. <strong>Churn Prediction with Ensemble Learning</strong></h3><ul id="4cfe0107-9dc3-41f7-b616-f551bcad31a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Predict customer churn for a telecom company.</li></ul><ul id="f051999d-e61e-493d-b2c1-a5cb868d1eb4" class="bulleted-list"><li style="list-style-type:disc"><strong>Resources</strong>:<ul id="2da45130-8515-45b5-8118-1031f23d1adf" class="bulleted-list"><li style="list-style-type:circle">Dataset: <a href="https://www.kaggle.com/blastchar/telco-customer-churn">Telco Customer Churn</a></li></ul><ul id="9c8bc04e-3763-45d2-b514-e07aacff5a10" class="bulleted-list"><li style="list-style-type:circle">Guide: <a href="https://towardsdatascience.com/handling-imbalanced-datasets-in-deep-learning-f48407a0e758">Handling Imbalanced Datasets in Deep Learning</a></li></ul></li></ul></div></div><hr id="8d6cc081-6118-41ba-88eb-0dfd904752f5"/><p id="16bd878f-5bfd-4c73-b0a4-7d1734ff3302" class="">
+</p><p id="5843dac3-3fcb-463f-ac53-98662f189dec" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
